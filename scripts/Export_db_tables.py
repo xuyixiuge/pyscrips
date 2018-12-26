@@ -29,3 +29,4 @@ for (db,) in dbs:
                 writer.writerow([dbhost,db,table])
         csvfile.close()
 conn.close()
+print("Export tables sucessfully")
