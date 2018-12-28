@@ -7,8 +7,8 @@ from time import sleep
 # traceback模块被用来跟踪异常返回信息
 import traceback
 # 设定用户名、密码
-username = u"913451212@qq.com"
-passwd = u"913451212boss"
+username = input("用户名：")
+passwd = input("密码：")
 # 起始站点和乘车时间的cookies值要去找；
 # 方法：先登录一下12306，输入地点日期什么的查询一下，然后在chrome浏览器中按F12，出现如下页面，在Application选项里找到相应的值。
 # 表格中的cookie值：
@@ -98,10 +98,8 @@ def getTickt():
                      print(u"还没开始预订")
                      continue
         sleep(1.5)
-        # 可以通过修改sleep的参数来调整延时, 但延时不要太低, 防止被12306网站认为是刷票屏蔽掉.
         bwr.find_by_text(ticketer).last.click()
         sleep(1.5)
-        #bwr.find_by_text(u"提交订单").click()
         bwr.find_by_id(u"submitOrder_id").click()
         sleep(1.5)
         bwr.find_by_id(u"qr_submit_id").click()
