@@ -24,7 +24,7 @@ from_date = u"2019-01-10"
 # 车次，选择第几趟，0则从上之下依次点击
 order = 0
 # 设定乘客姓名
-ticketer = u"徐明举"
+ticketer = input("乘客：")
 # 设定网址
 ticket_url = "https://kyfw.12306.cn/otn/leftTicket/init"
 login_url = "https://kyfw.12306.cn/otn/login/init"
