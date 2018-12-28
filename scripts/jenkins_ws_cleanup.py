@@ -10,6 +10,6 @@ with open('jobs.txt') as jobs:
         for jobpath, jobnames, jobfile in os.walk(job_workspace_path):
             if jobpath == job_workspace_path:
                 for jobname in jobnames:
-                    if jobname == (job + "-build"):
+                    if jobname == job:
                         print("removing workspace of job: %s" %jobname)
                         shutil.rmtree(os.path.join(jobpath, jobname))
